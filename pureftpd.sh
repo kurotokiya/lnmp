@@ -37,7 +37,6 @@ service mysqld restart
 service pureftpd start
 
 sed -i 's/tmppasswd/'$conn_ftpusers_dbpwd'/' ftpconf/ftp/config.php
-sed -i "s/myipaddress.com/`echo $local_IP`/" ftpconf/ftp/config.php
 sed -i "s@\$DEFUserID.*;@\$DEFUserID = `id -u $run_user`;@" ftpconf/ftp/config.php
 sed -i "s@\$DEFGroupID.*;@\$DEFGroupID = `id -g $run_user`;@" ftpconf/ftp/config.php
 sed -i 's@iso-8859-1@UTF-8@' ftpconf/ftp/language/english.php
