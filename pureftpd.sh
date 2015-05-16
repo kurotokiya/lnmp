@@ -6,7 +6,7 @@ cd /usr/local/src
 
 tar xzf pure-ftpd-1.0.37.tar.gz
 cd pure-ftpd-1.0.37
-ln -s /usr/local/mariadb/lib/libmysqlclient.so /usr/lib
+cp /usr/local/mariadb/lib/*.* /usr/lib/
 ./configure --prefix=/usr/local/pureftpd CFLAGS=-O2 --with-mysql=/usr/local/mariadb --with-quotas --with-cookie --with-virtualhosts --with-virtualchroot --with-diraliases --with-sysquotas --with-ratios --with-altlog --with-paranoidmsg --with-shadow --with-welcomemsg  --with-throttling --with-uploadscript --with-language=english --with-rfc2640
 make && make install
 
