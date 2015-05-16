@@ -4,8 +4,6 @@
 
 cd /usr/local/src
 
-apt-get -y install mysql-client
-
 tar xzf pure-ftpd-1.0.37.tar.gz
 cd pure-ftpd-1.0.37
 ln -s /usr/local/mariadb/lib/libmysqlclient.so /usr/lib
@@ -38,14 +36,14 @@ service mysqld restart
 /usr/local/mariadb/bin/mysql -uroot -p$database_password < ftpconf/script.mysql
 service pureftpd start
 
-sed -i 's/tmppasswd/'$conn_ftpusers_dbpwd'/' /home/wwwroot/default/ftp/config.php
-sed -i "s/myipaddress.com/`echo $local_IP`/" /home/wwwroot/default/ftp/config.php
-sed -i "s@\$DEFUserID.*;@\$DEFUserID = `id -u $run_user`;@" /home/wwwroot/default/ftp/config.php
-sed -i "s@\$DEFGroupID.*;@\$DEFGroupID = `id -g $run_user`;@" /home/wwwroot/default/ftp/config.php
-sed -i 's@iso-8859-1@UTF-8@' /home/wwwroot/default/ftp/language/english.php
+sed -i 's/tmppasswd/'$conn_ftpusers_dbpwd'/' ftpconfig/ftp/config.php
+sed -i "s/myipaddress.com/`echo $local_IP`/" ftpconfig/ftp/config.php
+sed -i "s@\$DEFUserID.*;@\$DEFUserID = `id -u $run_user`;@" ftpconfig/ftp/config.php
+sed -i "s@\$DEFGroupID.*;@\$DEFGroupID = `id -g $run_user`;@" ftpconfig/ftp/config.php
+sed -i 's@iso-8859-1@UTF-8@' ftpconfig/ftp/language/english.php
 cp ftpconf/chinese.php ftpconf/ftp/language/
-sed -i 's@\$LANG.*;@\$LANG = "chinese";@' ftp/config.php
-rm -rf  /home/wwwroot/default/ftp/install.php
+sed -i 's@\$LANG.*;@\$LANG = "chinese";@' ftpconf/ftp/config.php
+rm -rf  ftpconfig/ftp/install.php
 cp -R ftpconf/ftp /home/wwwroot/default/
 
 # iptables Ftp
