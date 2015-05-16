@@ -11,7 +11,6 @@ cp /usr/local/mariadb/lib/*.* /usr/lib/
 make && make install
 
 cp configuration-file/pure-config.pl /usr/local/pureftpd/sbin
-sed -i "s@/usr/local/pureftpd@/usr/local/pureftpd@" /usr/local/pureftpd/sbin/pure-config.pl
 chmod +x /usr/local/pureftpd/sbin/pure-config.pl
 cp contrib/redhat.init /etc/init.d/pureftpd
 cd ../
