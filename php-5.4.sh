@@ -2,10 +2,10 @@
 
 cd /usr/local/src
 
-tar xzf php-5.4.40.tar.gz
+tar xzf php-5.4.43.tar.gz
 wget -O fpm-race-condition.patch 'https://bugs.php.net/patch-display.php?bug_id=65398&patch=fpm-race-condition.patch&revision=1375772074&download=1'
-patch -d php-5.4.40 -p0 < fpm-race-condition.patch
-cd php-5.4.40
+patch -d php-5.4.43 -p0 < fpm-race-condition.patch
+cd php-5.4.43
 make clean
 CFLAGS= CXXFLAGS= ./configure --prefix=/usr/local/php-5.4 --with-config-file-path=/usr/local/php-5.4/etc \
 --with-fpm-user=www --with-fpm-group=www --enable-fpm --disable-fileinfo \
