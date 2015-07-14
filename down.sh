@@ -7,11 +7,11 @@ wget http://downloads.sourceforge.net/project/mcrypt/Libmcrypt/2.5.8/libmcrypt-2
 wget http://downloads.sourceforge.net/project/mhash/mhash/0.9.9.9/mhash-0.9.9.9.tar.gz
 wget http://downloads.sourceforge.net/project/mcrypt/MCrypt/2.6.8/mcrypt-2.6.8.tar.gz
 wget http://www.php.net/distributions/php-5.3.29.tar.gz
-wget http://www.php.net/distributions/php-5.4.40.tar.gz
-wget http://www.php.net/distributions/php-5.5.24.tar.gz
-wget http://www.php.net/distributions/php-5.6.8.tar.gz
+wget http://www.php.net/distributions/php-5.4.43.tar.gz
+wget http://www.php.net/distributions/php-5.5.27.tar.gz
+wget http://www.php.net/distributions/php-5.6.11.tar.gz
 wget http://downloads.sourceforge.net/project/pcre/pcre/8.36/pcre-8.36.tar.gz
-wget http://nginx.org/download/nginx-1.8.0.tar.gz
+wget http://nginx.org/download/nginx-1.9.2.tar.gz
 wget http://ftp.gnu.org/gnu/bison/bison-2.7.1.tar.gz
 wget http://download.pureftpd.org/pub/pure-ftpd/releases/pure-ftpd-1.0.37.tar.gz
 
