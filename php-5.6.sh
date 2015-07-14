@@ -2,10 +2,10 @@
 
 cd /usr/local/src
 
-tar xzf php-5.6.8.tar.gz
+tar xzf php-5.6.11.tar.gz
 wget -O fpm-race-condition.patch 'https://bugs.php.net/patch-display.php?bug_id=65398&patch=fpm-race-condition.patch&revision=1375772074&download=1'
-patch -d php-5.6.8 -p0 < fpm-race-condition.patch
-cd php-5.6.8
+patch -d php-5.6.11 -p0 < fpm-race-condition.patch
+cd php-5.6.11
 make clean
 CFLAGS= CXXFLAGS= ./configure --prefix=/usr/local/php-5.6 --with-config-file-path=/usr/local/php-5.6/etc \
 --with-fpm-user=www --with-fpm-group=www --enable-fpm --disable-fileinfo \
