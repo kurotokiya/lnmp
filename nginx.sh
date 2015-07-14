@@ -2,8 +2,8 @@
 
 cd /usr/local/src
 
-tar xzf nginx-1.8.0.tar.gz
-cd nginx-1.8.0
+tar xzf nginx-1.9.2.tar.gz
+cd nginx-1.9.2
 
 # close debug
 sed -i 's@CFLAGS="$CFLAGS -g"@#CFLAGS="$CFLAGS -g"@' auto/cc/gcc
